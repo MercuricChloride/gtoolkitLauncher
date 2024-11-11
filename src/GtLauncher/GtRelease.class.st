@@ -44,9 +44,9 @@ GtRelease >> downloadReleaseFor: aSymbol [
 		at: #queryKeyValueSafeSet put: ZnOptions queryKeyValueSafeSet \ '/;';
 		during: [ link asUrl saveContentsToFile: download ].
 		
-	(ZipArchive new readFrom: download) extractAllTo: output.
+	"(ZipArchive new readFrom: download) extractAllTo: output."
 	
-	download ensureDelete ] asAsyncPromise
+	"download ensureDelete" ] asAsyncPromise
 ]
 
 { #category : #'as yet unclassified' }

@@ -34,7 +34,7 @@ GtInstall >> gtJsonFor: aView [
 				when: BrEditorTextChanged
 				do: [ :val | contents := val text ]
 				 ];
-		styler: [ JSONParser gtStyler ];
+		styler: [ StParser gtStyler];
 		text: [ contents ]
 ]
 
@@ -48,5 +48,7 @@ GtInstall >> path: aPath [
 GtInstall >> startupScript: aString [
 	| file |
 	file := path / 'startup.st'.
+	(file exists)
+		ifFalse: [ file createFile ].
 	file gtSaveContents: aString
 ]

@@ -140,82 +140,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-11-11T08:50:38.266728-08:00"
+						"dateAndTimeString" : "2024-11-11T13:58:01.908209-08:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "HzsfR/riDQCN83uZB/OT3Q=="
 				},
-				"code" : "releases := GtlConfiguration getReleases.\rreleases inspect."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-11-10T20:18:14.582023-08:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-11-10T20:18:29.491418-08:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "0IhZIP3iDQCcX6IECv1Cpw=="
-				},
-				"code" : "ZnOptions globalDefault clone\r\tat: #queryKeyValueSafeSet put: ZnOptions queryKeyValueSafeSet \\ '/;';\r\tduring: [ ('https://github.com/rust-lang/rust-analyzer/releases/download/' , each , '/'\r\t\t\t, downloadFile) asUrl saveContentsToFile: downloaded.\r\t\ttrue ]"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-11-10T19:33:03.968536-08:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-11-11T08:46:28.16154-08:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "qt3IfvziDQCQKy7NCv1Cpw=="
-				},
-				"code" : "tag := 'v1.0.1281'.\rrelease := GtlConfiguration getReleases at: tag.\rrelease downloadReleaseFor: #macArm"
+				"code" : "releases := GtlConfiguration getReleases."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -242,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-11-11T09:10:21.762624-08:00"
+						"dateAndTimeString" : "2024-11-11T09:11:02.744988-08:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "0u4P1wfjDQCXkhyBCyLHEw=="
 				},
-				"code" : "installs := (GtlConfiguration imagesPath entries select: [:each | each isDirectory ])\r\tcollect: [:each | GtInstall newFrom: each path ]"
+				"code" : "installs := (GtlConfiguration imagesPath entries select: [:each | each isDirectory ])\r\tcollect: [:each | GtInstall newFrom: each reference ]"
 			}
 		]
 	},
