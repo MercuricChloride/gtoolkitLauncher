@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'raw'
 	],
-	#category : #'GtLauncher-Buttons'
+	#category : #'GtLauncher-Models'
 }
 
 { #category : #'as yet unclassified' }

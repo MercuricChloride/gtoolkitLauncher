@@ -9,7 +9,7 @@ Class {
 		'releaseEndpoint',
 		'resultsPerPage'
 	],
-	#category : #'GtLauncher-Buttons'
+	#category : #'GtLauncher-Models'
 }
 
 { #category : #accessing }

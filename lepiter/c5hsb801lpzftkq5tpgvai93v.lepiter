@@ -216,6 +216,40 @@
 					"uidString" : "qt3IfvziDQCQKy7NCv1Cpw=="
 				},
 				"code" : "tag := 'v1.0.1281'.\rrelease := GtlConfiguration getReleases at: tag.\rrelease downloadReleaseFor: #macArm"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-11T09:05:09.66136-08:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-11T09:11:02.744988-08:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "0u4P1wfjDQCXkhyBCyLHEw=="
+				},
+				"code" : "installs := (GtlConfiguration imagesPath entries select: [:each | each isDirectory ])\r\tcollect: [:each | GtInstall newFrom: each reference ]"
 			}
 		]
 	},
