@@ -140,14 +140,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-11-11T08:50:38.266728-08:00"
+						"dateAndTimeString" : "2024-11-11T08:50:35.944182-08:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "HzsfR/riDQCN83uZB/OT3Q=="
 				},
-				"code" : "releases := GtlConfiguration getReleases.\rreleases inspect."
+				"code" : "releases := GtlConfiguration getReleases.\r"
 			},
 			{
 				"__type" : "pharoSnippet",

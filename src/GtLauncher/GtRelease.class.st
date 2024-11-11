@@ -23,24 +23,12 @@ GtRelease >> assets [
 	^ raw at: 'assets'
 ]
 
-{ #category : #'as yet unclassified' }
-GtRelease >> downloadFor: aSymbol [
-	| link |
-	link := self perform: aSymbol.
-
-	^ ZnClient new
-		beBinary;
-		beOneShot;
-		url: (ZnUrl fromString: link);
-		downloadTo: FileLocator imageDirectory / 'foo'
-]
-
 { #category : #accessing }
 GtRelease >> downloadReleaseFor: aSymbol [
 	| tag name link download output |
 	^ [ tag := raw at: 'tag_name'.
 
-	name := Date today mmddyyyy , '-' , tag.
+	name := (Date today dayOfYear asString) , '-' , tag.
 
 	self
 		assert: (GtlConfiguration imagesPath / name) exists not
@@ -59,6 +47,28 @@ GtRelease >> downloadReleaseFor: aSymbol [
 	(ZipArchive new readFrom: download) extractAllTo: output.
 	
 	download ensureDelete ] asAsyncPromise
+]
+
+{ #category : #'as yet unclassified' }
+GtRelease >> gtDownloadForLinux: anAction [
+	<gtAction>
+	^ anAction button
+		priority: 11;
+		tooltip: 'Linux x86';
+		label: 'Linux x86';
+		icon: BrGlamorousVectorIcons down;
+		action: [ :aButton | (self downloadReleaseFor: #linux) inspect ]
+]
+
+{ #category : #'as yet unclassified' }
+GtRelease >> gtDownloadForMac: anAction [
+	<gtAction>
+	^ anAction button
+		priority: 11;
+		tooltip: 'Mac Arm';
+		label: 'Mac Arm';
+		icon: BrGlamorousVectorIcons down;
+		action: [ :aButton | (self downloadReleaseFor: #macArm) inspect ]
 ]
 
 { #category : #'as yet unclassified' }
