@@ -3,7 +3,8 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'path',
-		'contents'
+		'contents',
+		'activeProcess'
 	],
 	#category : #'GtLauncher-Models'
 }
@@ -39,9 +40,36 @@ GtInstall >> gtJsonFor: aView [
 ]
 
 { #category : #'as yet unclassified' }
+GtInstall >> installedOn [
+	^ path creationTime asDate
+]
+
+{ #category : #'as yet unclassified' }
+GtInstall >> name [
+	^ (path fullName splitOn: '/') last
+]
+
+{ #category : #'as yet unclassified' }
 GtInstall >> path: aPath [ 
 	path := aPath.
 	contents := self contents
+]
+
+{ #category : #'as yet unclassified' }
+GtInstall >> run [
+	| process |
+	activeProcess
+		ifNotNil: [ activeProcess isTerminated ifTrue: [ activeProcess := nil ] ].
+	self
+		assert: activeProcess isNil
+		description: 'Trying to run another instance of gt, but we already have one opened!'.
+	Smalltalk os isMacOSX
+		ifTrue: [ process := GtExternalProcessBuilder new
+					command: 'open';
+					arg: (path / 'GlamorousToolkit.app') pathString;
+					pipeStdout;
+					pipeStderr ].
+	activeProcess := process spawn
 ]
 
 { #category : #'as yet unclassified' }

@@ -1,0 +1,144 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-17T21:36:42.288737-08:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-17T22:26:59.378036-08:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ehbXCYvjDQCOZlB4DUP/VA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "First we need to build the list for the currently selected items"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-17T22:27:02.507464-08:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-17T23:39:22.915137-08:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "xPHbvYvjDQCFVBn2C2l3EQ=="
+				},
+				"code" : "installedVersions := (GtlConfiguration imagesPath entries select: [:each | each isDirectory ])\r\tcollect: [:each | GtInstall newFrom: each reference ].\r\rLauncherInstalls new\r\tasElement."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-17T23:38:00.146883-08:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-18T00:08:23.638242-08:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "aFCiu4zjDQCx2UUEC4bPgA=="
+				},
+				"code" : "\rlauncher := LauncherInstalls new asElement.\r\raSpace := BlSpace new\r\t\textent: 1000@1000;\r\t\ttitle: 'Glamorous Toolkit Launcher'.\raSpace addChild: launcher.\r\raSpace show"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2024-11-17T21:36:50.740147-08:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2024-11-17T21:36:50.740147-08:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Building a UI for installing and managing releases"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "7cc0d609-8be3-0d00-8e65-b3d80d43ff54"
+	}
+}
